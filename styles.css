@@ -1,0 +1,73 @@
+:root {
+  --main-dark: #0e0e10;
+  --main-light: #e5ded4;
+  --main-light-transparent: #e5ded41a;
+  --yellow: #f7d881;
+  --pinkish-red: #fba0ac;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "EB Garamond", serif;
+}
+
+.profile {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.profile img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+.profile::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  z-index: -1;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    90deg,
+    var(--pinkish-red) 0%,
+    var(--yellow) 100%,
+    #00d4ff 100%
+  );
+}
+
+.hire-btn {
+  display: block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: 2px solid var(--main-light-transparent);
+}
+
+.hire-btn:hover {
+  border-color: var(--main-light);
+  background-color: var(--main-light-transparent);
+}
